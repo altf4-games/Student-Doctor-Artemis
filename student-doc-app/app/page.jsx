@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import Calendar from "react-calendar";
-import 'react-calendar/dist/Calendar.css'; // Import the default styling for the calendar
+import 'react-calendar/dist/Calendar.css';
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [date, setDate] = useState(new Date());
@@ -106,11 +107,7 @@ export default function Home() {
       </section>
 
       {/* Footer Section */}
-      <footer className="py-8 bg-gray-800 text-white text-center">
-        <div className="container mx-auto px-4">
-          <p>© 2024 Student-Doctor Health System. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
