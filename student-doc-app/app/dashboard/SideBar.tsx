@@ -24,12 +24,12 @@ const SideBar = () => {
         <span>Appointments</span>
       </button>
 
-      <div className='bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-gray-800 flex items-center justify-start font-medium text-sm gap-2 transition cursor-pointer'>
-        <FaCalendarCheck />
+      <div className='bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md text-gray-800 font-medium text-sm gap-2 transition cursor-pointer'>
+
         <PopupButton
           url="https://calendly.com/zatchtec2005"
           rootElement={document.body}
-          text="Book Appointment"
+          text="☏ Book Appointment"
           className='flex-grow'
         />
       </div>

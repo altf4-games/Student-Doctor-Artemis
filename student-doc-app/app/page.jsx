@@ -96,11 +96,11 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="testimonial text-center p-6 bg-white shadow-lg rounded-lg">
-              <p className="mb-4">"The AI-powered monitoring is a game changer! I can keep track of my vitals effortlessly."</p>
+              <p className="mb-4 text-black">"I can keep track of my vitals effortlessly."</p>
               <h3 className="text-xl font-bold text-teal-600">- Sarah Lee</h3>
             </div>
             <div className="testimonial text-center p-6 bg-white shadow-lg rounded-lg">
-              <p className="mb-4">"The appointment booking system is seamless, and the priority queue saved me so much time."</p>
+              <p className="mb-4 text-black">"The appointment booking system is seamless, and the priority queue saved me so much time."</p>
               <h3 className="text-xl font-bold text-teal-600">- Michael Brown</h3>
             </div>
           </div>

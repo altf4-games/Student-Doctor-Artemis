@@ -11,7 +11,7 @@ const Dashboard = () => {
     <>
       <Navbar />
       <div className='flex flex-col min-h-screen bg-gray-50'>
-        <div className='flex w-full h-full'>
+        <div className='flex w-full h-[100vh]'>
           <aside className='w-1/4'>
             <SideBar />
           </aside>
@@ -43,8 +43,9 @@ const Dashboard = () => {
             </div>
           </main>
         </div>
-        <Footer />
+
       </div>
+              <Footer />
     </>
   );
 };
