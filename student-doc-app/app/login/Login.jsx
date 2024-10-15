@@ -32,7 +32,7 @@ export default function Login() {
     e.preventDefault();
     if (otp === generatedOtp) {
       // OTP is correct, redirect to profile
-      router.push("/profile");
+      router.push("/dashboard");
     } else {
       setError("Invalid OTP, please try again.");
     }

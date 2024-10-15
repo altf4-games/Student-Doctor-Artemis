@@ -2,7 +2,7 @@
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useRouter } from 'next/navigation';
-import React from 'react';
+import React, { useState } from 'react';
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', current: true },
@@ -16,12 +16,15 @@ function classNames(...classes) {
 export default function Navbar() {
   const router = useRouter();
 
+  const [login, setLogin] = useState(true);
+
   const handleNavigation = (href) => {
     router.push(href); // Navigate to the page
   };
 
   const handleLogin = () => {
     router.push('/login'); // Navigate to login page
+    setLogin(false);
   };
 
   return (
@@ -132,12 +135,16 @@ export default function Navbar() {
                 </Menu>
 
                 {/* Login Button */}
-                <button
+                {
+                  login && (<button
                   className="ml-4 bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded"
                   onClick={handleLogin} // Navigate to login page
+                  
                 >
                   Login
-                </button>
+                </button>)
+                }
+                
               </div>
             </div>
           </div>

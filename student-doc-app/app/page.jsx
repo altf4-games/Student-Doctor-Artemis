@@ -4,6 +4,7 @@ import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ChatBot from "./components/ChatBot";
 
 export default function Home() {
   const [date, setDate] = useState(new Date());
@@ -12,7 +13,7 @@ export default function Home() {
     <div>
       <Navbar />
       {/* Hero Section */}
-      <section className="hero bg-teal-500 text-white py-20">
+      <section className="hero bg-teal-500 text-white py-20 ">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-4">
             Welcome to Student-Doctor Health System
@@ -105,7 +106,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <ChatBot />
       {/* Footer Section */}
       <Footer />
     </div>
