@@ -5,9 +5,8 @@ import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Profile', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Dashboard', href: '/dashboard', current: true },
+  { name: 'Profile', href: '/profile', current: false },
 ];
 
 function classNames(...classes) {
@@ -105,7 +104,7 @@ export default function Navbar() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/profile"
                             className={classNames(
                               active ? 'bg-gray-100' : '',
                               'block px-4 py-2 text-sm text-gray-700'
