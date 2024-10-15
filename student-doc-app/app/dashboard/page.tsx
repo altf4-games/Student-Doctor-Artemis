@@ -1,10 +1,6 @@
+// pages/Dashboard.js
 
-
-import React from 'react'
-import { BsClipboard2DataFill } from 'react-icons/bs';
-import { FaCalendarCheck, FaHistory } from 'react-icons/fa';
-import { FaFileSignature } from 'react-icons/fa6';
-import { MdMonitorHeart } from 'react-icons/md';
+import React from 'react';
 import SideBar from './SideBar';
 import Details1 from './Details1';
 import Navbar from '../components/Navbar';
@@ -14,46 +10,43 @@ const Dashboard = () => {
   return (
     <>
       <Navbar />
-          <div className='w-full h-[100vh] flex flex-col px-40'>
-     <div>
-{/*navbar */}
-     </div>
-     <div className='w-full h-full grid grid-cols-4 '>
-      <div className=' h-full col-span-1'>
-        <SideBar />
-      </div>
-        <div className='col-span-3'>
+      <div className='flex flex-col min-h-screen bg-gray-50'>
+        <div className='flex w-full h-full'>
+          <aside className='w-1/4'>
+            <SideBar />
+          </aside>
+          <main className='flex-grow p-6'>
+            <h1 className='text-3xl font-bold text-gray-800 mb-4'>Welcome to Your Dashboard</h1>
 
-        
-        <Details1
-          numberOfSessions="3"
-          timings="10:00 am - 11:00 am"
-          patientName="Raunak Kumar Gupta"
-          userEmail="test123@gmail.com"
-          doctorName="Pradyum Mistry"
-        />
-        <Details1 
-          numberOfSessions="2"
-          timings="4:00 pm - 5:00 pm"
-          patientName="Vishwa Koparkar"
-          userEmail="test215@gmail.com"
-          doctorName="Rahul Kadam"
-        />
-        <Details1 
-          numberOfSessions="2"
-          timings="4:00 pm - 5:00 pm"
-          patientName="Vishwa Koparkar"
-          userEmail="test215@gmail.com"
-          doctorName="Rahul Kadam"
-        />
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+              <Details1
+                numberOfSessions="3"
+                timings="10:00 am - 11:00 am"
+                patientName="Raunak Kumar Gupta"
+                userEmail="test123@gmail.com"
+                doctorName="Pradyum Mistry"
+              />
+              <Details1 
+                numberOfSessions="2"
+                timings="4:00 pm - 5:00 pm"
+                patientName="Vishwa Koparkar"
+                userEmail="test215@gmail.com"
+                doctorName="Rahul Kadam"
+              />
+              <Details1 
+                numberOfSessions="2"
+                timings="4:00 pm - 5:00 pm"
+                patientName="Vishwa Koparkar"
+                userEmail="test215@gmail.com"
+                doctorName="Rahul Kadam"
+              />
+            </div>
+          </main>
         </div>
-     </div>
-      
+        <Footer />
       </div>
-      <Footer />
     </>
+  );
+};
 
-  )
-}
-
-export default Dashboard
+export default Dashboard;
